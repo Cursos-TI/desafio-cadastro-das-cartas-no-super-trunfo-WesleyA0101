@@ -95,17 +95,21 @@ int main(){
     printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
     printf("Super poder: %.2f\n", super_poder2);  
 
-    printf("\n=======Comparação=======\n");
-    printf("População: carta %d venceu (%d)\n", populacao1 > populacao2 ? 1 : 2, populacao2 > populacao2 ? 1 : 0);
-    printf("Área: carta %d venceu (%d)\n", area1 > area2 ? 1 : 2, area1 > area2 ? 1 : 0);
-    printf("PIB: carta %d venceu (%d)\n", pib1 > pib2 ? 1 : 2, pib1 > pib2 ? 1 : 0);
-    printf("Pontos turisticos: carta %d venceu (%d)\n", pontos_turisticos1 > pontos_turisticos2 ? 1 : 2, pontos_turisticos1 > pontos_turisticos2 ? 1 : 0);
-    printf("Densidade: carta %d venceu (%d)\n", densidade1 < densidade2 ? 1 : 2, densidade1 < densidade2 ? 1 : 0);
-    printf("PIB per capita: carta %d venceu (%d)\n", pib_per_capita1 > pib_per_capita2 ? 1 : 2, pib_per_capita1 > pib_per_capita2 ? 1 : 0);
-    printf("Super poder: carta %d venceu (%d)\n", super_poder1 > super_poder2 ? 1 : 2, super_poder1 > super_poder2 ? 1 : 0);
+    printf("=======Comparação=======\n");
+    //Comparação única como pede o enunciado do tema2 do super trunfo: Desenvolvendo a lógica
+    printf("Atributo escolhido: PIB\n");
+   
+    if(pib1 > pib2){
+        printf("Carta 1: PIB da cidade %s é de: %.2f", cidade1, pib1);
+	    printf("Carta 2: PIB da cidade %s é de: %.2f", cidade2, pib2);
+	    printf("Resultado: Carta %d (%s) venceu!\n", pib1 > pib2 ? 1 : 2, cidade1);
 
+    }else{
+        printf("Carta 1: PIB da cidade %s é de: %.2f", cidade1, pib1);
+	    printf("Carta 2: PIB da cidade %s é de: %.2f", cidade2, pib2);
+	    printf("Resultado: Carta %d (%s) venceu!\n", pib1 > pib2 ? 1 : 2, cidade2);
 
-    
+    }  
 
 
    return 0;
